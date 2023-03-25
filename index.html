@@ -408,11 +408,8 @@
       <button class="scroll-right nav-arrow">Next<span></span></button>
     </div>
     <script>
-      // Best viewed in full screen mode: https://codepen.io/jackiezen/full/MWBBawb
 
-      // Jackie Zen in collaboration with Daniel Wong
-
-      // DOM elements
+      // DOM 
       const scrollLeft = document.querySelector(".scroll-left");
       const scrollRight = document.querySelector(".scroll-right");
       const heroDiv = document.querySelector(".hero-img");
@@ -556,17 +553,17 @@
         // SET DELIMITER
         let DELIMITER = "";
 
-        // delcare album specified by index
+        // album specified by index declaration
         const album = albums[index];
 
-        // reset all animations and disable button
+        // resetting all animations and disable button
         for (const text of texts) text.classList.remove("show-texts");
         emblemDiv.innerHTML = "";
         scrollLeft.disabled = true;
         scrollRight.disabled = true;
         document.removeEventListener("keydown", handleKeyScroll);
 
-        // add css classes, texts, and styles
+        // css classes, texts, and styles
         sectionContainer.id = `hero-${album.album
           .toLowerCase()
           .replace(" ", "-")}`;
@@ -591,7 +588,7 @@
           emblemDiv.append(node)
         );
 
-        // add final animations
+        // final animations added
         heroDiv.classList.add("album-transition");
       };
 
